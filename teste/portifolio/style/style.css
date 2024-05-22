@@ -1,0 +1,382 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* -------------------- CONFIGURAÇÃO GERAL ------------------------ */
+
+body{
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1580px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+h2.title{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.title span{
+    color: #38fffe;
+}
+/* ----------------------- HEADER ------------------------------ */
+
+header{
+    padding: 20px 4%;
+    /* box-shadow: 0 0 40PX 10PX rgb(99, 99, 99); */
+}
+
+header > .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav.navbar ul li{
+    display: inline-block;
+    padding: 0 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+.btn-contact button{
+    border: 0;
+    padding: 10px 40px;
+    font-size: 18px;
+    border-radius: 15px;
+    font-weight: 600;
+    color: rgb(99, 99, 99);
+    background-color: #38fffe;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0px 0px 8px 3px #38fffe;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+header a {
+    color: rgb(99, 99, 99);
+    display: inline-block;
+}
+
+a:hover{
+    color: white;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+.logo img{
+    width: 150px;
+    height: 102px;
+}
+/* ------------------------------ MENU MOBILE ------------------------------ */
+
+.btn-open-menu i{
+    color: #38fffe;
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background-color: rgba(0, 0, 0, 0.712);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.open-menu{
+    width: 70%;
+}
+
+.menu-mobile.open-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-close{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-close i{
+    color: #38fffe;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #38fffe;
+    color: black;
+}
+
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.719);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;;
+    z-index: 88888;
+    display: none;
+}
+
+/* ------------------------------ TOP PAGE ------------------------------ */
+
+section.top-page{
+    padding: 40px 4%;
+}
+
+section.top-page .flex{
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    margin: 5% auto;
+}
+
+.top-page h1{
+    font-size: 70px;
+}
+
+.top-page .flex .img-top-page{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.top-page h2{
+    font-size: 30px;
+}
+
+.top-page h2 span{
+    color: #38fffe;
+}
+
+.top-page .flex .description p{
+    margin: 40px 0;
+    font-size: 25px;
+}
+
+.top-page .img-top-page img{
+    width: 90%;
+    height: 90%;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+
+    100%{
+        top: 30px;
+    }
+}
+
+/* ---------------------------- MINHAS ESPECIALIDADES ----------------------------- */
+
+section.specialties{
+    padding: 110px 4%;
+}
+
+section.specialties .flex{
+    gap: 60px;
+}
+
+.specialties .specialties-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.specialties .specialties-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgb(99, 99, 99);
+}
+
+.specialties .specialties-box i{
+    font-size: 70px;
+    color: #38fffe;
+}
+
+.specialties .specialties-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ---------------------------- ABOUT-ME ----------------------------- */
+
+section.about-me{
+    padding: 120px 4%;
+}
+
+section.about-me .flex{
+    gap: 60px;
+    align-items: center;
+}
+
+.about-me .txt-about h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.about-me .txt-about h2 span{
+    display: block;
+    color: #38fffe;
+}
+
+.about-me .txt-about p{
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.about-me .img-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me .img-about img{
+    width: 70%;
+    height: 90%;
+    position: relative;
+}
+
+.social-media button{
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: #38fffe;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0 8px;
+}
+
+/* ---------------------------- FOOTER ----------------------------- */
+
+footer{
+    padding: 20PX 4%;
+    box-shadow: 0 0 40PX 10PX rgb(99, 99, 99);
+}
+
+.border{
+    border-top: 2px solid #38fffe;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+footer .line-footer p i{
+    color: #38fffe;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: white;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+.logo-footer img{
+    width: 150px;
+    height: 102px;
+}
+
+@media screen and (max-width: 1020px) {
+
+    .top-page .img-top-page img{
+        width: 100%;
+    }
+    h2.title{
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    section.top-page{
+        padding: 20px 8%;
+    }
+    
+    .top-page h1{
+        font-size: 30px;
+    }
+
+    .top-page .flex{
+        flex-direction: column-reverse;
+    }
+
+    section.specialties{
+        padding: 40px 8%;
+    }
+
+    .flex{
+        flex-direction: column;
+    }
+
+    section.about-me{
+        padding: 100px 8%;
+    }
+
+    .about-me .txt-about h2{
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .about-me .img-about img{
+        width: 100%;
+    }
+
+    .navbar, .btn-contact{
+        display: none;
+    }
+
+    .social-media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .flex{
+        align-items: center;
+    }
+}
